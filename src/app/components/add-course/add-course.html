@@ -1,0 +1,46 @@
+<h1>Add Course</h1>
+
+<form (ngSubmit)="addCourse()">
+
+  <label>Course Name</label>
+  <input
+    type="text"
+    name="name"
+    [(ngModel)]="name"
+    required
+  >
+
+  <label>Description</label>
+  <textarea
+    name="description"
+    [(ngModel)]="description"
+    required
+  ></textarea>
+
+  <label>Duration</label>
+  <input
+    type="text"
+    name="duration"
+    [(ngModel)]="duration"
+    required
+  >
+
+  <label>Number of Lessons</label>
+  <input
+    type="number"
+    name="lessons"
+    [(ngModel)]="lessons"
+    min="1"
+    required
+  >
+
+  <label>Status</label>
+  <select name="status" [(ngModel)]="status">
+    <option value="Not Started">Not Started</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Completed">Completed</option>
+  </select>
+
+  <button type="submit">Add Course</button>
+
+</form>

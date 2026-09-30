@@ -1,0 +1,27 @@
+<h1>Course Details</h1>
+
+@if (course) {
+
+  <div class="course-details">
+
+    <h2>{{ course.name }}</h2>
+
+    <p>{{ course.description }}</p>
+
+    <p>Duration: {{ course.duration }}</p>
+
+    <p>Lessons: {{ course.lessons }}</p>
+
+    <p>Status: {{ course.status }}</p>
+
+    @if (course.status === 'Not Started') {
+      <button (click)="startCourse()">Start Course</button>
+    }
+
+    @if (course.status === 'In Progress') {
+      <button (click)="continueCourse()">Continue Course</button>
+    }
+
+  </div>
+
+}

@@ -1,0 +1,68 @@
+h1 {
+  margin-bottom: 25px;
+  font-size: 32px;
+  color: #5b4b73;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 15px;
+  color: #51445f;
+  border: 1px solid #d8cde2;
+  box-shadow: 0 4px 12px rgba(91, 75, 115, 0.08);
+  transition: 0.2s;
+}
+
+/* Light Purple Shades */
+
+.card:nth-child(1) {
+  background: #eee7f5;
+}
+
+.card:nth-child(2) {
+  background: #e8def0;
+}
+
+.card:nth-child(3) {
+  background: #e3d7ec;
+}
+
+.card:nth-child(4) {
+  background: #ddd0e7;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 7px 18px rgba(91, 75, 115, 0.14);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 17px;
+  color: #5b4b73;
+}
+
+.card p {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 15px 0 0;
+  color: #5b4b73;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

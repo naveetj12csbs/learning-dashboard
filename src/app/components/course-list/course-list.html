@@ -1,0 +1,48 @@
+<h1>Courses</h1>
+
+<div class="search-box">
+
+  <input
+    type="text"
+    placeholder="Search course"
+    [(ngModel)]="search"
+  >
+
+  <select [(ngModel)]="status">
+    <option value="All">All</option>
+    <option value="Completed">Completed</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Not Started">Not Started</option>
+  </select>
+
+  <select [(ngModel)]="sort">
+    <option value="name">Course Name</option>
+  </select>
+
+</div>
+
+<div class="course-list">
+
+  @for (course of getCourses(); track course.id) {
+
+    <div class="course-card">
+
+      <h2>{{ course.name }}</h2>
+
+      <p>{{ course.description }}</p>
+
+      <p>Duration: {{ course.duration }}</p>
+
+      <p>Lessons: {{ course.lessons }}</p>
+
+      <p>Status: {{ course.status }}</p>
+
+      <a [routerLink]="['/courses', course.id]">
+        View Details
+      </a>
+
+    </div>
+
+  }
+
+</div>
